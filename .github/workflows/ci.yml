@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   call-central-pipeline:
-    # REPLACE [YOUR-USERNAME] below with your actual GitHub username!
     uses: mlochman/devops-governance/.github/workflows/standard-build.yml@main
     with:
       environment: 'production'
