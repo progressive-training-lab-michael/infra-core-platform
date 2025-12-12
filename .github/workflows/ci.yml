@@ -1,0 +1,11 @@
+name: CI Pipeline
+
+on: [push]
+
+jobs:
+  call-central-pipeline:
+    uses: progressive-training-lab-michael/devops-governance/.github/workflows/standard-build.yml@main
+    with:
+      environment: 'production'
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
