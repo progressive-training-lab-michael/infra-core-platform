@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   call-central-pipeline:
-    uses: mlochman/devops-governance/.github/workflows/standard-build.yml@main
+    uses: progressive-training-lab-michael/devops-governance/.github/workflows/standard-build.yml@main
     with:
       environment: 'production'
     secrets:
