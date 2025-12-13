@@ -1,0 +1,12 @@
+name: App CI Pipeline
+
+on: [push]
+
+jobs:
+  call-central-workflow:
+    uses: progressive-training-lab-michael/devops-governance/.github/workflows/secure-build.yml@main
+    with:
+      node-version: '18'
+      environment: 'production'
+    secrets:
+      api-token: ${{ secrets.GITHUB_TOKEN }}
